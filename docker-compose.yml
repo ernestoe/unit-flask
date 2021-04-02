@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   unit-webapp:
-    build: .
+    image: ernestoe/flask-unit
     volumes:
       - ./config:/docker-entrypoint.d
       - ./log/unit.log:/var/log/unit.log
