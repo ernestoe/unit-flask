@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  unit-webapp:
+    build: .
+    volumes:
+      - ./config:/docker-entrypoint.d
+      - ./log/unit.log:/var/log/unit.log
+      - ./state:/var/lib/unit
+      - ./webapp:/www
+    ports:
+      - 8080:8000
